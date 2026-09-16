@@ -7,7 +7,7 @@ public class CubeMovement : MonoBehaviour
     
     private Vector2 _playerInputDirection;
     private Vector3 _movementVelocity;
-    public float movementSpeed;
+    public float movementSpeed = 5;
     
     private void Start()
     {
@@ -22,6 +22,6 @@ public class CubeMovement : MonoBehaviour
     private void FixedUpdate()
     {
         _movementVelocity = new Vector3(_playerInputDirection.x, 0, _playerInputDirection.y) * movementSpeed;
-        gameObject.transform.position += _movementVelocity * Time.deltaTime;
+        transform.position += _movementVelocity * Time.deltaTime;
     }
 }
